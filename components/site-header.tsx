@@ -12,16 +12,6 @@ import { ModeToggle } from "@/components/mode-toggle"
 import { Icons } from "@/components/icons"
 import { useScrollPosition } from "@/hooks/use-scroll-position"
 
-const navItems = [
-  { name: "Home", href: "#home" },
-  { name: "Features", href: "#features" },
-  { name: "Components", href: "#components" },
-  { name: "Testimonials", href: "#testimonials" },
-  { name: "Pricing", href: "#pricing" },
-  { name: "Blog", href: "#blog" },
-  { name: "FAQ", href: "#faq" },
-]
-
 export function SiteHeader() {
   const pathname = usePathname()
   const scrollPosition = useScrollPosition()
@@ -45,28 +35,8 @@ export function SiteHeader() {
       <div className="container px-4 md:px-6 flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center space-x-2 z-10">
           <Icons.logo className="h-6 w-6" />
-          <span className="font-heading text-xl tracking-tight">ComponentCraft</span>
+          <span className="font-heading text-xl tracking-tight">Sky Aisle</span>
         </Link>
-
-        {/* Desktop Navigation - Hidden on mobile */}
-        <nav className="hidden md:flex items-center space-x-1 lg:space-x-6">
-          {navItems.map((item) => (
-            <Link
-              key={item.name}
-              href={item.href}
-              className="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors relative group"
-              onClick={(e) => {
-                e.preventDefault()
-                document.querySelector(item.href)?.scrollIntoView({
-                  behavior: "smooth",
-                })
-              }}
-            >
-              {item.name}
-              <span className="absolute inset-x-0 bottom-0 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-200"></span>
-            </Link>
-          ))}
-        </nav>
 
         <div className="flex items-center space-x-4">
           <ModeToggle />
@@ -74,19 +44,10 @@ export function SiteHeader() {
           {/* Desktop CTA Buttons - Hidden on mobile */}
           <div className="hidden md:flex items-center space-x-2">
             <Button variant="ghost" size="sm" className="neumorphic-button" asChild>
-              <Link href="#login">Sign in</Link>
+              <Link href="/auth/login">Sign In</Link>
             </Button>
             <Button size="sm" className="neumorphic-button-primary" asChild>
-              <Link href="#register">
-                Get Started
-                <motion.div
-                  className="ml-1"
-                  animate={{ x: [0, 3, 0] }}
-                  transition={{ repeat: Number.POSITIVE_INFINITY, repeatDelay: 3, duration: 0.8 }}
-                >
-                  →
-                </motion.div>
-              </Link>
+              <Link href="/auth/sign-up">Sign Up</Link>
             </Button>
           </div>
 
@@ -130,27 +91,6 @@ export function SiteHeader() {
                 >
                   <X className="text-foreground h-5 w-5" />
                 </button>
-              </div>
-
-              <div className="py-4 px-2">
-                <nav className="flex flex-col space-y-1">
-                  {navItems.map((item) => (
-                    <Link
-                      key={item.name}
-                      href={item.href}
-                      className="px-4 py-3 text-base font-medium text-foreground hover:bg-muted rounded-md transition-colors"
-                      onClick={(e) => {
-                        e.preventDefault()
-                        document.querySelector(item.href)?.scrollIntoView({
-                          behavior: "smooth",
-                        })
-                        closeMobileMenu()
-                      }}
-                    >
-                      {item.name}
-                    </Link>
-                  ))}
-                </nav>
               </div>
 
               <div className="mt-auto p-4 border-t border-border">
