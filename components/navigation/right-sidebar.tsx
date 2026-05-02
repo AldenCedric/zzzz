@@ -34,7 +34,7 @@ export function RightSidebar() {
   }, [supabase])
 
   return (
-    <aside className="w-80 sticky top-0 h-screen overflow-y-auto p-4">
+    <aside className="sticky top-0 h-screen w-80 overflow-y-auto p-4">
       {/* Search Box */}
       <div className="mb-6">
         <div className="relative">
@@ -47,10 +47,12 @@ export function RightSidebar() {
       </div>
 
       {/* What's Happening */}
-      <Card className="p-4 mb-6">
-        <div className="flex items-center gap-2 mb-4">
-          <Sparkles className="h-5 w-5" />
-          <h2 className="text-xl font-bold">What&apos;s happening</h2>
+      <Card className="mb-6 p-6">
+        <div className="mb-4 flex items-center gap-2">
+          <Sparkles className="h-5 w-5 shrink-0 text-muted-foreground" />
+          <h2 className="font-heading text-lg font-semibold tracking-tight">
+            What&apos;s happening
+          </h2>
         </div>
 
         {loading ? (
@@ -84,14 +86,14 @@ export function RightSidebar() {
           </div>
         )}
 
-        <Button variant="outline" className="w-full mt-4 rounded-full">
+        <Button variant="outline" className="mt-4 w-full rounded-full">
           Show more
         </Button>
       </Card>
 
       {/* Suggestions */}
-      <Card className="p-4">
-        <h2 className="text-xl font-bold mb-4">Who to follow</h2>
+      <Card className="p-6">
+        <h2 className="mb-4 font-heading text-lg font-semibold tracking-tight">Who to follow</h2>
         <div className="space-y-4">
           {[1, 2, 3].map((i) => (
             <div key={i} className="flex items-center justify-between">

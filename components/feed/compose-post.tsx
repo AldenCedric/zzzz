@@ -93,7 +93,7 @@ export function ComposePost({ onPostCreated }: ComposePostProps) {
   }
 
   return (
-    <Card className="border-t rounded-none border-l-0 border-r-0">
+    <Card className="rounded-none border-x-0 border-t border-b-0 bg-card shadow-none">
       <div className="p-4">
         <form onSubmit={handleSubmit} className="space-y-4">
           {error && (
@@ -116,8 +116,8 @@ export function ComposePost({ onPostCreated }: ComposePostProps) {
                 className="min-h-[120px] resize-none border-0 p-0 text-lg placeholder:text-muted-foreground focus:ring-0"
               />
 
-              <div className="mt-4 flex items-center justify-between">
-                <div className="flex gap-2">
+              <div className="mt-4 flex items-end justify-between gap-3">
+                <div className="flex shrink-0 gap-2">
                   <Button
                     type="button"
                     variant="ghost"
@@ -131,6 +131,7 @@ export function ComposePost({ onPostCreated }: ComposePostProps) {
 
                 <Button
                   type="submit"
+                  size="lg"
                   disabled={loading || !content.trim()}
                   className="rounded-full px-6 font-bold"
                 >

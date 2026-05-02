@@ -94,26 +94,26 @@ export default function EditProfilePage() {
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center h-screen">
-        <p>Loading...</p>
+      <div className="flex h-screen items-center justify-center">
+        <p className="text-muted-foreground">Loading...</p>
       </div>
     )
   }
 
   return (
-    <div className="max-w-2xl mx-auto">
+    <div className="mx-auto w-full min-w-0 max-w-2xl px-4">
       {/* Header */}
-      <div className="sticky top-0 bg-background/80 backdrop-blur-sm border-b z-10 p-4 flex items-center gap-4">
+      <div className="app-shell-header -mx-4 flex items-center gap-3 px-4">
         <Link href={`/profile/${profile?.handle}`}>
           <Button variant="ghost" size="icon">
             <ArrowLeft className="h-5 w-5" />
           </Button>
         </Link>
-        <h1 className="text-xl font-bold">Edit Profile</h1>
+        <h1 className="app-shell-title">Edit Profile</h1>
       </div>
 
-      <Card className="border-t rounded-none mx-0">
-        <CardContent className="p-8">
+      <Card className="mx-0 rounded-none border-x-0 border-t border-b-0 shadow-none">
+        <CardContent className="p-6 pt-8 md:p-8">
           <form onSubmit={handleSubmit} className="space-y-6">
             {error && (
               <Alert variant="destructive">
@@ -123,11 +123,9 @@ export default function EditProfilePage() {
             )}
 
             {success && (
-              <Alert className="bg-green-500/10 border-green-500/20">
-                <AlertCircle className="h-4 w-4 text-green-600" />
-                <AlertDescription className="text-green-700">
-                  Profile updated successfully! Redirecting...
-                </AlertDescription>
+              <Alert className="border-emerald-500/30 bg-emerald-500/10 text-emerald-700 dark:text-emerald-400">
+                <AlertCircle className="h-4 w-4" />
+                <AlertDescription>Profile updated successfully! Redirecting...</AlertDescription>
               </Alert>
             )}
 

@@ -52,7 +52,7 @@ export function PostCard({ post }: PostCardProps) {
   const timeAgo = formatDistanceToNow(createdAt, { addSuffix: true })
 
   return (
-    <Card className="border-t rounded-none">
+    <Card className="rounded-none border-x-0 border-t border-b-0 shadow-none">
       <div className="p-4 hover:bg-muted/50 transition-colors cursor-pointer">
         <div className="flex gap-3">
           {/* Avatar */}

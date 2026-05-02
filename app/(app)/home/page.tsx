@@ -19,9 +19,5 @@ export default async function HomePage() {
     redirect('/auth/login')
   }
 
-  return (
-    <div className="min-h-screen bg-background">
-      <Feed />
-    </div>
-  )
+  return <Feed />
 }

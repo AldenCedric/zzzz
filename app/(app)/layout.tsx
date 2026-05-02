@@ -24,7 +24,7 @@ export default async function AppLayout({
       <Sidebar />
 
       {/* Main Content */}
-      <main className="flex-1 border-l border-r max-w-2xl">{children}</main>
+      <main className="min-w-0 flex-1 max-w-2xl border-x border-border">{children}</main>
 
       {/* Right Sidebar */}
       <RightSidebar />

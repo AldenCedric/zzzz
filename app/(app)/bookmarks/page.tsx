@@ -5,14 +5,14 @@ export const metadata = {
 
 export default function BookmarksPage() {
   return (
-    <div className="bg-background">
-      <div className="sticky top-0 bg-background/80 backdrop-blur-sm border-b z-10 p-4">
-        <h1 className="text-2xl font-bold">Bookmarks</h1>
+    <div className="min-h-screen bg-background">
+      <div className="app-shell-header">
+        <h1 className="app-shell-title">Bookmarks</h1>
       </div>
 
-      <div className="p-8 text-center text-muted-foreground">
-        <p className="mb-4">No bookmarks yet</p>
-        <p className="text-sm">
+      <div className="px-4 py-12 text-center text-muted-foreground">
+        <p className="mb-4 text-foreground">No bookmarks yet</p>
+        <p className="app-shell-subtitle">
           Save posts to bookmark them for later
         </p>
       </div>

@@ -40,14 +40,14 @@ export function Sidebar() {
   }
 
   return (
-    <aside className="w-64 border-r sticky top-0 h-screen overflow-y-auto p-4 flex flex-col">
+    <aside className="sticky top-0 flex h-screen w-64 flex-col overflow-y-auto border-r border-border p-4">
       {/* Logo */}
-      <Link href="/home" className="mb-8">
-        <div className="text-2xl font-bold">Sky Aisle</div>
+      <Link href="/home" className="mb-8 block">
+        <div className="font-heading text-2xl font-bold tracking-tight">Sky Aisle</div>
       </Link>
 
       {/* Navigation */}
-      <nav className="flex-1 space-y-4">
+      <nav className="flex-1 space-y-1">
         {NAVIGATION_ITEMS.map((item) => {
           const Icon = item.icon
           const isActive = pathname === item.href
@@ -56,9 +56,9 @@ export function Sidebar() {
             <Link key={item.href} href={item.href}>
               <Button
                 variant={isActive ? 'default' : 'ghost'}
-                className="w-full justify-start text-lg"
+                className="h-11 w-full justify-start gap-3 px-3 text-base font-normal"
               >
-                <Icon className="h-5 w-5 mr-3" />
+                <Icon className="h-5 w-5 shrink-0" />
                 {item.label}
               </Button>
             </Link>
@@ -67,7 +67,7 @@ export function Sidebar() {
       </nav>
 
       {/* Compose Button */}
-      <Button className="w-full mb-4 text-lg h-12 rounded-full font-bold">
+      <Button size="lg" className="mb-4 h-12 w-full rounded-full font-bold">
         Post
       </Button>
 
@@ -92,7 +92,7 @@ export function Sidebar() {
           <DropdownMenuItem asChild>
             <Link href="/settings">Settings</Link>
           </DropdownMenuItem>
-          <DropdownMenuItem onClick={handleLogout} className="text-red-600">
+          <DropdownMenuItem onClick={handleLogout} className="text-destructive focus:text-destructive">
             <LogOut className="h-4 w-4 mr-2" />
             Sign out
           </DropdownMenuItem>

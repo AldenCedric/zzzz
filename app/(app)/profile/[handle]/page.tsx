@@ -5,7 +5,7 @@ import { createClient } from '@/lib/supabase/client'
 import { Card } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { PostCard } from '@/components/feed/post-card'
-import { ArrowLeft, Mail, Link as LinkIcon, MapPin, Calendar } from 'lucide-react'
+import { ArrowLeft, Link as LinkIcon, MapPin, Calendar } from 'lucide-react'
 import Link from 'next/link'
 import { formatDistanceToNow } from 'date-fns'
 import { useRouter } from 'next/navigation'
@@ -90,32 +90,32 @@ export default function ProfilePage({ params }: { params: { handle: string } }) 
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center h-screen">
-        <p>Loading...</p>
+      <div className="flex h-screen items-center justify-center">
+        <p className="text-muted-foreground">Loading...</p>
       </div>
     )
   }
 
   if (!user) {
     return (
-      <div className="flex items-center justify-center h-screen">
-        <p>User not found</p>
+      <div className="flex h-screen items-center justify-center">
+        <p className="text-muted-foreground">User not found</p>
       </div>
     )
   }
 
   return (
-    <div className="bg-background">
+    <div className="min-h-screen bg-background">
       {/* Header */}
-      <div className="sticky top-0 bg-background/80 backdrop-blur-sm border-b z-10 p-4 flex items-center gap-4">
+      <div className="app-shell-header flex items-center gap-3">
         <Link href="/home">
           <Button variant="ghost" size="icon">
             <ArrowLeft className="h-5 w-5" />
           </Button>
         </Link>
-        <div>
-          <h1 className="text-xl font-bold">{user.display_name}</h1>
-          <p className="text-sm text-muted-foreground">{posts.length} posts</p>
+        <div className="min-w-0">
+          <h1 className="app-shell-title truncate">{user.display_name}</h1>
+          <p className="app-shell-subtitle">{posts.length} posts</p>
         </div>
       </div>
 
@@ -123,7 +123,7 @@ export default function ProfilePage({ params }: { params: { handle: string } }) 
       <div className="h-48 bg-muted" />
 
       {/* Profile Info Card */}
-      <Card className="border-t rounded-none mx-0">
+      <Card className="mx-0 rounded-none border-x-0 border-t border-b-0 shadow-none">
         <div className="p-4">
           {/* Avatar & Follow Button */}
           <div className="flex justify-between items-start mb-4">
@@ -178,9 +178,9 @@ export default function ProfilePage({ params }: { params: { handle: string } }) 
       </Card>
 
       {/* Posts */}
-      <div className="border-t">
+      <div className="border-t border-border">
         {posts.length === 0 ? (
-          <div className="p-8 text-center text-muted-foreground">
+          <div className="px-4 py-12 text-center text-muted-foreground">
             No posts yet
           </div>
         ) : (

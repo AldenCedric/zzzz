@@ -320,4 +320,22 @@
   .font-sans {
     font-family: var(--font-sans);
   }
+
+  /* App shell: align sticky headers and titles with marketing page rhythm (see app/page.tsx) */
+  .app-shell-header {
+    @apply sticky top-0 z-10 border-b border-border bg-background/80 backdrop-blur-sm px-4 py-3;
+  }
+
+  .app-shell-title {
+    @apply font-heading text-xl font-bold tracking-tight text-foreground;
+  }
+
+  .app-shell-subtitle {
+    @apply text-sm text-muted-foreground;
+  }
+
+  /* Non-sticky page title (use above a sticky region to avoid overlapping sticky top-0 bars) */
+  .app-shell-static-title-bar {
+    @apply border-b border-border bg-background px-4 py-3;
+  }
 }

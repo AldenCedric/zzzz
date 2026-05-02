@@ -78,23 +78,21 @@ export default function PeoplePage() {
   }
 
   return (
-    <div className="bg-background">
+    <div className="min-h-screen bg-background">
       {/* Header */}
-      <div className="sticky top-0 bg-background/80 backdrop-blur-sm border-b z-10 p-4">
-        <h1 className="text-2xl font-bold">People</h1>
-        <p className="text-sm text-muted-foreground">
-          Discover and follow interesting people
-        </p>
+      <div className="app-shell-header space-y-1">
+        <h1 className="app-shell-title">People</h1>
+        <p className="app-shell-subtitle">Discover and follow interesting people</p>
       </div>
 
-      <Card className="rounded-none border-t mx-0">
+      <Card className="mx-0 rounded-none border-x-0 border-t border-b-0 shadow-none">
         <div className="divide-y">
           {loading ? (
-            <div className="p-8 text-center text-muted-foreground">
+            <div className="px-4 py-12 text-center text-muted-foreground">
               Loading people...
             </div>
           ) : users.length === 0 ? (
-            <div className="p-8 text-center text-muted-foreground">
+            <div className="px-4 py-12 text-center text-muted-foreground">
               No users found
             </div>
           ) : (

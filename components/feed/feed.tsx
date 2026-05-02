@@ -69,16 +69,18 @@ export function Feed() {
   }, [supabase])
 
   return (
-    <div className="max-w-2xl mx-auto">
-      <div className="sticky top-0 bg-background/80 backdrop-blur-sm border-b z-10">
+    <div className="mx-auto w-full min-w-0 max-w-2xl px-4">
+      <div className="app-shell-header -mx-4 px-4">
         <ComposePost onPostCreated={(newPost) => setPosts((prev) => [newPost, ...prev])} />
       </div>
 
       <div>
         {loading ? (
-          <div className="p-8 text-center text-muted-foreground">Loading posts...</div>
+          <div className="py-12 text-center text-muted-foreground">Loading posts...</div>
         ) : posts.length === 0 ? (
-          <div className="p-8 text-center text-muted-foreground">No posts yet. Be the first to post!</div>
+          <div className="py-12 text-center text-muted-foreground">
+            No posts yet. Be the first to post!
+          </div>
         ) : (
           posts.map((post) => <PostCard key={post.id} post={post} />)
         )}
