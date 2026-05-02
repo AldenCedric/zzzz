@@ -4,7 +4,6 @@ import { Inter, Montserrat } from "next/font/google"
 
 import { cn } from "@/lib/utils"
 import { ThemeProvider } from "@/components/theme-provider"
-import { SiteFooter } from "@/components/site-footer"
 import { PageTransition } from "@/components/page-transition"
 
 import "@/app/globals.css"
@@ -44,7 +43,6 @@ export default function RootLayout({
                 <div className="flex-1">{children}</div>
               </PageTransition>
             </Suspense>
-            <SiteFooter />
           </div>
         </ThemeProvider>
       </body>

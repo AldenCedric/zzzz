@@ -66,9 +66,9 @@ export default async function HomePage() {
             </div>
             <div className="bg-muted p-6 rounded-lg">
               <TrendingUp className="h-8 w-8 text-purple-500 mb-3" />
-              <h3 className="font-bold mb-2">Discover Trends</h3>
+              <h3 className="font-bold mb-2">Discover Travel Trends</h3>
               <p className="text-sm text-muted-foreground">
-                Find what&apos;s trending and popular now
+                Find what&apos;s trending and popular now in the travel industry
               </p>
             </div>
           </div>
@@ -105,6 +105,13 @@ export default async function HomePage() {
           <Link href="/auth/sign-up">Get Started Now</Link>
         </Button>
       </section>
+
+      {/* Footer */}
+      <footer className="border-t bg-muted/30 py-8">
+        <div className="max-w-7xl mx-auto px-4 text-center text-sm text-muted-foreground">
+          <p>&copy; {new Date().getFullYear()} Sky Aisle. All rights reserved.</p>
+        </div>
+      </footer>
     </div>
   )
 }
