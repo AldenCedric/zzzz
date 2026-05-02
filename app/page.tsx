@@ -22,31 +22,15 @@ export default async function HomePage() {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Navigation */}
-      <nav className="border-b sticky top-0 bg-background/80 backdrop-blur-sm z-50">
-        <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="text-2xl font-bold">Social</div>
-          <div className="flex gap-3">
-            <Button asChild variant="outline">
-              <Link href="/auth/login">Sign In</Link>
-            </Button>
-            <Button asChild>
-              <Link href="/auth/sign-up">Sign Up</Link>
-            </Button>
-          </div>
-        </div>
-      </nav>
-
       {/* Hero Section */}
       <section className="max-w-7xl mx-auto px-4 py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <h1 className="text-5xl lg:text-6xl font-bold mb-6">
-              Connect with the world
+              Sky Aisle
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Share your thoughts, follow friends, and discover what&apos;s happening around you.
-              Join a community of millions.
+              Sky Aisle
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild size="lg">
@@ -96,11 +80,11 @@ export default async function HomePage() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div>
-              <div className="text-4xl font-bold mb-2">500M+</div>
+              <div className="text-4xl font-bold mb-2">100+</div>
               <p className="text-muted-foreground">Active Users</p>
             </div>
             <div>
-              <div className="text-4xl font-bold mb-2">1B+</div>
+              <div className="text-4xl font-bold mb-2">500+</div>
               <p className="text-muted-foreground">Posts Daily</p>
             </div>
             <div>

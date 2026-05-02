@@ -43,7 +43,7 @@ export function Sidebar() {
     <aside className="w-64 border-r sticky top-0 h-screen overflow-y-auto p-4 flex flex-col">
       {/* Logo */}
       <Link href="/home" className="mb-8">
-        <div className="text-2xl font-bold">Social</div>
+        <div className="text-2xl font-bold">Sky Aisle</div>
       </Link>
 
       {/* Navigation */}
