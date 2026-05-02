@@ -16,9 +16,9 @@ export function SiteFooter() {
               Sky Aisle
             </p>
             <div className="flex gap-4">
-              <Link href="https://twitter.com" target="_blank" rel="noreferrer" className="glassmorphic-icon">
+              <Link href="https://x.com" target="_blank" rel="noreferrer" className="glassmorphic-icon">
                 <Icons.twitter className="h-5 w-5 text-muted-foreground transition-colors hover:text-foreground" />
-                <span className="sr-only">Twitter</span>
+                <span className="sr-only">X</span>
               </Link>
               <Link href="https://github.com" target="_blank" rel="noreferrer" className="glassmorphic-icon">
                 <Icons.gitHub className="h-5 w-5 text-muted-foreground transition-colors hover:text-foreground" />
@@ -33,7 +33,7 @@ export function SiteFooter() {
         </div>
         <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <p className="text-sm text-muted-foreground opacity-70">
-            &copy; {new Date().getFullYear()} ComponentCraft. All rights reserved.
+            &copy; {new Date().getFullYear()} Sky Aisle. All rights reserved.
           </p>
         </div>
       </div>

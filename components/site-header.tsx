@@ -47,7 +47,7 @@ export function SiteHeader() {
               <Link href="/auth/login">Sign In</Link>
             </Button>
             <Button size="sm" className="neumorphic-button-primary" asChild>
-              <Link href="/auth/sign-up">Sign Up</Link>
+              <Link href="/auth/sign-up">Create Account</Link>
             </Button>
           </div>
 
@@ -82,7 +82,7 @@ export function SiteHeader() {
               <div className="flex items-center justify-between p-4 border-b border-border">
                 <Link href="/" className="flex items-center space-x-2" onClick={closeMobileMenu}>
                   <Icons.logo className="h-6 w-6" />
-                  <span className="font-heading text-lg">ComponentCraft</span>
+                  <span className="font-heading text-lg">Sky Aisle</span>
                 </Link>
                 <button
                   onClick={closeMobileMenu}
@@ -96,13 +96,13 @@ export function SiteHeader() {
               <div className="mt-auto p-4 border-t border-border">
                 <div className="grid grid-cols-2 gap-3">
                   <Button variant="outline" className="w-full" asChild>
-                    <Link href="#login" onClick={closeMobileMenu}>
+                    <Link href="/auth/login" onClick={closeMobileMenu}>
                       Sign in
                     </Link>
                   </Button>
                   <Button className="w-full neumorphic-button-primary" asChild>
-                    <Link href="#register" onClick={closeMobileMenu}>
-                      Get Started
+                    <Link href="/auth/sign-up" onClick={closeMobileMenu}>
+                      Create Account
                     </Link>
                   </Button>
                 </div>
