@@ -4,7 +4,6 @@ import { Inter, Montserrat } from "next/font/google"
 
 import { cn } from "@/lib/utils"
 import { ThemeProvider } from "@/components/theme-provider"
-import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { PageTransition } from "@/components/page-transition"
 
@@ -24,13 +23,6 @@ const fontHeading = Montserrat({
   weight: ["600", "700"],
 })
 
-export const metadata: Metadata = {
-  title: "ComponentCraft | Modern UI Component Library",
-  description: "A premium component library built with shadcn/ui and Aceternity UI for modern web applications",
-  keywords: ["component library", "UI components", "React", "Next.js", "shadcn/ui", "Aceternity UI"],
-    generator: 'v0.dev'
-}
-
 export default function RootLayout({
   children,
 }: {
@@ -47,7 +39,6 @@ export default function RootLayout({
       >
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
           <div className="relative flex min-h-screen flex-col">
-            <SiteHeader />
             <Suspense>
               <PageTransition>
                 <div className="flex-1">{children}</div>
