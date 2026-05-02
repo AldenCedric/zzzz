@@ -45,7 +45,7 @@ export function SiteHeader() {
       <div className="container px-4 md:px-6 flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center space-x-2 z-10">
           <Icons.logo className="h-6 w-6" />
-          <span className="font-heading text-xl tracking-tight">ComponentCraft</span>
+          <span className="font-heading text-xl tracking-tight">Sky Aisle</span>
         </Link>
 
         {/* Desktop Navigation - Hidden on mobile */}
@@ -74,19 +74,10 @@ export function SiteHeader() {
           {/* Desktop CTA Buttons - Hidden on mobile */}
           <div className="hidden md:flex items-center space-x-2">
             <Button variant="ghost" size="sm" className="neumorphic-button" asChild>
-              <Link href="#login">Sign in</Link>
+              <Link href="/auth/login">Sign In</Link>
             </Button>
             <Button size="sm" className="neumorphic-button-primary" asChild>
-              <Link href="#register">
-                Get Started
-                <motion.div
-                  className="ml-1"
-                  animate={{ x: [0, 3, 0] }}
-                  transition={{ repeat: Number.POSITIVE_INFINITY, repeatDelay: 3, duration: 0.8 }}
-                >
-                  →
-                </motion.div>
-              </Link>
+              <Link href="/auth/sign-up">Create Account</Link>
             </Button>
           </div>
 
@@ -121,7 +112,7 @@ export function SiteHeader() {
               <div className="flex items-center justify-between p-4 border-b border-border">
                 <Link href="/" className="flex items-center space-x-2" onClick={closeMobileMenu}>
                   <Icons.logo className="h-6 w-6" />
-                  <span className="font-heading text-lg">ComponentCraft</span>
+                  <span className="font-heading text-lg">Sky Aisle</span>
                 </Link>
                 <button
                   onClick={closeMobileMenu}
@@ -156,13 +147,13 @@ export function SiteHeader() {
               <div className="mt-auto p-4 border-t border-border">
                 <div className="grid grid-cols-2 gap-3">
                   <Button variant="outline" className="w-full" asChild>
-                    <Link href="#login" onClick={closeMobileMenu}>
+                    <Link href="/auth/login" onClick={closeMobileMenu}>
                       Sign in
                     </Link>
                   </Button>
                   <Button className="w-full neumorphic-button-primary" asChild>
-                    <Link href="#register" onClick={closeMobileMenu}>
-                      Get Started
+                    <Link href="/auth/sign-up" onClick={closeMobileMenu}>
+                      Create Account
                     </Link>
                   </Button>
                 </div>
