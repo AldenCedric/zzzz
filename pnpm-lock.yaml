@@ -101,6 +101,9 @@ importers:
       autoprefixer:
         specifier: ^10.4.20
         version: 10.4.20(postcss@8.0.0)
+      autoskills:
+        specifier: ^0.3.5
+        version: 0.3.5
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
@@ -1205,6 +1208,11 @@ packages:
     hasBin: true
     peerDependencies:
       postcss: ^8.1.0
+
+  autoskills@0.3.5:
+    resolution: {integrity: sha512-wnOGSIqThHB82TEm/PUNoQR4yNhN5vVeE255IlqUCRo2Yc/FRZCpYWuBL4wMVdJv6WqsOmqZZmnbHVBPKpi9PQ==}
+    engines: {node: '>=22.6.0'}
+    hasBin: true
 
   balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
@@ -3010,6 +3018,8 @@ snapshots:
       picocolors: 1.1.1
       postcss: 8.0.0
       postcss-value-parser: 4.2.0
+
+  autoskills@0.3.5: {}
 
   balanced-match@1.0.2: {}
 

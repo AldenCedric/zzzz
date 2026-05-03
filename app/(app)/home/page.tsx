@@ -3,8 +3,8 @@ import { redirect } from 'next/navigation'
 import { Feed } from '@/components/feed/feed'
 
 export const metadata = {
-  title: 'Home | Social Media',
-  description: 'Your feed of posts from people you follow',
+  title: 'Home | Sky Aisle',
+  description: 'Your feed of posts from people you follow on Sky Aisle',
 }
 
 export default async function HomePage() {

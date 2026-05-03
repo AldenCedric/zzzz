@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'Notifications | Social Media',
+  title: 'Notifications | Sky Aisle',
   description: 'Your notifications',
 }
 

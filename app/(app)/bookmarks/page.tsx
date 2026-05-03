@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'Bookmarks | Social Media',
+  title: 'Bookmarks | Sky Aisle',
   description: 'Your saved posts',
 }
 

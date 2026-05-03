@@ -1,7 +1,7 @@
 import { Feed } from '@/components/feed/feed'
 
 export const metadata = {
-  title: 'Explore | Social Media',
+  title: 'Explore | Sky Aisle',
   description: 'Discover trending posts and topics',
 }
 
